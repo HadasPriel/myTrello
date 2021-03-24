@@ -1,0 +1,51 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+.board-title {
+    font-family: "Share Tech Mono", monospace;
+    margin-left: 8px;
+}
+
+.board-wraper-home {
+    user-select: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 18px;
+    position: static;
+
+    .board-preview-home {
+        font-family: "Roboto", sans-serif;
+        min-width: 300px;
+        min-height: 200px;
+        // margin-bottom: 20px;
+        display: flex;
+        // flex-direction: column;
+        li {
+            width: 350px;
+            height: 200px;
+            background-color: $clr2;
+            color: $clr6;
+            padding: 10px;
+            list-style: none;
+        }
+
+        article {
+            width: 350px;
+            margin: auto;
+            margin-bottom: 20px;
+        }
+        a {
+            color: $clr6;
+            padding: 10px;
+            text-align: center;
+            margin: auto;
+        }
+    }
+
+    // h3 {
+    //     background-color: #ddd;
+    //     padding: 10px 5px;
+    //     margin: 5px;
+    //     list-style: none;
+    // }
+}

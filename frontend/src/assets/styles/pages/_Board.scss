@@ -1,0 +1,9 @@
+.board-wraper {
+    height: 100%;
+    user-select: none;
+    white-space: nowrap;
+    overflow-x: auto;
+    overflow-y: hidden;
+    padding-bottom: 18px;
+    position: static;
+}

@@ -1,0 +1,29 @@
+.edit-group-title {
+
+    .new-title-input{
+        width: 250px;
+        height: 25px;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 3px;
+
+
+    }
+
+    .save-btn{
+        width: 250px;
+        height: 25px;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border:0px;
+        border-radius: 3px;
+        outline: none;
+        &:hover{
+            background-color: rgb(108, 107, 107);
+        }
+        // padding: 5px;
+    }
+}

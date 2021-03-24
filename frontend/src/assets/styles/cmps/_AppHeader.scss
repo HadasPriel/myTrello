@@ -1,0 +1,126 @@
+.main-header {
+    position: fixed;
+    z-index: 2;
+    width: 100%;
+}
+
+.app-header {
+    .normal-media {
+        display: none;
+    }
+
+    height: 40px;
+    background-color: rgba(0, 0, 0, 0.32);
+    padding: 4px;
+    nav {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    h5 {
+        font-family: "TechMono", monospace;
+        font-size: 18px;
+        font-weight: 700;
+        line-height: 32px;
+        padding: 0 12px;
+        color: #fff;
+        margin: auto;
+        // display: inline-block;
+    }
+
+    .header-logo {
+        position: absolute;
+        left: 50%;
+        transform: translate-x(50%);
+
+        display: inline-block;
+        font-family: "TechMono", monospace;
+        font-size: 23px;
+
+        color: rgba(255, 255, 255, 0.8);
+        line-height: 32px;
+        margin: auto;
+        text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+        @media (max-width: $narrow-breakpoint) {
+            left: 47%;
+        }
+    }
+
+    button,
+    span,
+    a {
+        display: inline-block;
+        background-color: rgba(255, 255, 255, 0.3);
+        color: #ffff;
+        font-weight: 700;
+        line-height: 32px;
+        margin: 0 4px 0 0;
+        padding: 0 12px;
+        border-radius: 3px;
+        font-size: 14px;
+    }
+
+    input {
+        color: #ffff;
+        padding: 4px 0;
+        margin-right: 4px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    label {
+        padding: 0;
+    }
+
+    label::after {
+        font-family: "fa";
+        content: "\f002";
+    }
+
+    .header-home::before {
+        font-family: "fa";
+        content: "\f015";
+    }
+    .header-board::before {
+        font-family: "fa";
+        content: "\f0db";
+    }
+    .header-user::before {
+        font-family: "fa";
+        content: "\f007";
+    }
+    .header-about-us::before {
+        font-family: "fa";
+        content: "\f05a";
+    }
+    .header-show-menu::before {
+        font-family: "fa";
+        content: "\f141";
+    }
+
+    .user-img {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        border-radius: 2em;
+        background-size: cover;
+        background-position: center;
+    }
+
+    &.board-header {
+        background: rgba(0, 0, 0, 0.24);
+    }
+
+    @media (min-width: $narrow-breakpoint) {
+        .normal-media {
+            display: inline-block;
+        }
+        &.narrow-media {
+            display: none;
+        }
+        .narrow-media {
+            display: inline-block;
+        }
+        // .header-logo {
+        //     left: 48%;
+        // }
+    }
+}

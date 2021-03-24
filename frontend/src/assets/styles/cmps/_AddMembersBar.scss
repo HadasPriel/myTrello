@@ -1,0 +1,42 @@
+.add-members-bar {
+    input {
+        margin-bottom: 15px;
+    }
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        width: 280px;
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        font-weight: 600;
+        cursor: pointer;
+        .member-item {
+            display: flex;
+            align-items: center;
+        }
+        .user-img {
+            margin-right: 5px;
+        }
+    }
+
+    .alreadyMember::after {
+        font-family: "fa";
+        content: "\f00c";
+        font-size: 12px;
+    }
+}
+
+// .card-member-show {
+//     .user-img {
+//         display: inline-block;
+//         height: 32px;
+//         width: 32px;
+//         border-radius: 2em;
+//         background-size: cover;
+//         background-position: center;
+//         margin: 0 5px;
+//     }
+// }

@@ -1,0 +1,88 @@
+.add-new-group {
+    font-family: "Roboto", sans-serif;
+    display: inline-block;
+    width: 290px;
+    .add-new-wraper {
+        background-color: rgba(235, 236, 240, 0.751);
+        border-radius: 3px;
+        box-sizing: border-box;
+        margin-right: 20px;
+        max-height: 100%;
+        position: relative;
+        white-space: normal;
+        width: 272px;
+        padding: 5px;
+    }
+
+    .add-another-group {
+        width: 250px;
+        height: 25px;
+        margin: auto;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        padding: 5px;
+        border-radius: 3px;
+    }
+
+    .save-group-btn {
+        width: 100px;
+        height: 35px;
+        background-color: #62bd50;
+        color: white;
+        margin-left: 4px;
+        margin-top: 5px;
+        margin-bottom: 5px;
+        border: 0px;
+        display: inline;
+        border-radius: 3px;
+        outline: none;
+        &:hover {
+            background-color: #51c13a;
+        }
+    }
+
+    .cancel-group-btn {
+        width: 20px;
+        height: 25px;
+        font-size: 1rem;
+        display: inline;
+        margin-left: 5px;
+        margin-top: 10px;
+        margin-bottom: 5px;
+        border: 0px;
+
+        outline: none;
+        &:hover {
+            color: rgb(33, 33, 33);
+        }
+    }
+
+    .cancel-group-btn::before {
+        font-family: "fa";
+        content: "\f00d";
+    }
+
+    form {
+        margin-top: 0px;
+        margin-right: 3px;
+    }
+    button {
+        color: #656565;
+        background-color: rgba(255, 255, 255, 0);
+    }
+
+    // .save-btn{
+    //     width: 250px;
+    //     height: 25px;
+    //     margin: auto;
+    //     margin-top: 5px;
+    //     margin-bottom: 5px;
+    //     border:0px;
+    //     border-radius: 3px;
+    //     outline: none;
+    //     &:hover{
+    //         background-color: rgb(108, 107, 107);
+    //     }
+    // padding: 5px;
+    // }
+}

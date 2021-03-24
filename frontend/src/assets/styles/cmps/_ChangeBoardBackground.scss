@@ -1,0 +1,15 @@
+.change-board-background-container {
+    font-size: 1rem;
+    color: $clr6;
+ 
+    // display: flex;
+
+    .backgrounds-tumbs {
+    width: 100px;
+    height: 100px;
+    border-radius: 3px;
+    margin: 5px;
+    background-size: cover;
+       
+    }
+}

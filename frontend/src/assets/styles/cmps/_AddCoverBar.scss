@@ -1,0 +1,125 @@
+.add-cover-bar {
+    .edit-btn.remove {
+        display: inline-block;
+        margin: 10px 20px;
+        width: 80%;
+    }
+
+    input {
+        visibility: hidden;
+    }
+    .colors {
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        gap: 8px;
+
+        .color {
+            width: 50px;
+            height: 30px;
+        }
+
+        label {
+            cursor: pointer;
+            height: 20px;
+            width: 30px;
+            border-radius: 5px;
+            &.\#7bc86c {
+                background-color: #7bc86c;
+            }
+            &.\#f5dd29 {
+                background-color: #f5dd29;
+            }
+            &.\#ffaf3f {
+                background-color: #ffaf3f;
+            }
+            &.\#ef7564 {
+                background-color: #ef7564;
+            }
+            &.\#cd8de5 {
+                background-color: #cd8de5;
+            }
+            &.\#5ba4cf {
+                background-color: #5ba4cf;
+            }
+            &.\#29cce5 {
+                background-color: #29cce5;
+            }
+            &.\#6deca9 {
+                background-color: #6deca9;
+            }
+            &.\#ff8ed4 {
+                background-color: #ff8ed4;
+            }
+            &.\#172b4d {
+                background-color: #172b4d;
+            }
+        }
+    }
+    h5 {
+        color: #5e6c84;
+        font-size: 12px;
+        font-weight: 500;
+        letter-spacing: 0.04em;
+        line-height: 16px;
+        text-transform: uppercase;
+        margin: 0px 15px;
+    }
+    .demo.window {
+        display: inline-block;
+        margin: 10px;
+        cursor: pointer;
+        height: 62px;
+        width: 130px;
+        border-radius: 3px;
+        border: rgba(9, 30, 66, 0.08) 1px solid;
+    }
+    .demo.header {
+        height: 28px;
+        border-radius: 3px 3px 0 0;
+    }
+
+    .demo.content {
+        padding: 6px 4px 4px 6px;
+    }
+
+    .demo.p1 {
+        width: 115px;
+        height: 4px;
+        margin-bottom: 4px;
+    }
+    .demo.p2 {
+        width: 90px;
+        height: 4px;
+    }
+
+    .full {
+        &.demo.window {
+            background: #5e6c84;
+            opacity: 0.3;
+        }
+        .demo.p1,
+        .demo.p2 {
+            background: #ffff;
+        }
+    }
+
+    .top {
+        .demo.header {
+            background: #5e6c84;
+            opacity: 0.3;
+        }
+        .demo.p1,
+        .demo.p2 {
+            background: #5e6c84;
+            opacity: 0.3;
+        }
+    }
+
+    .inline-block {
+        display: inline-block;
+    }
+}
+.inline-block {
+    display: inline-block;
+}

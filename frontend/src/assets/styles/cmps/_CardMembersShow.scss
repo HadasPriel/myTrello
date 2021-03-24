@@ -1,0 +1,19 @@
+.card-member-show {
+    .user-img {
+        display: inline-block;
+        height: 32px;
+        width: 32px;
+        border-radius: 2em;
+        background-size: cover;
+        background-position: center;
+        margin: 0 1px;
+    }
+}
+
+.card-preview {
+    .user-img {
+        height: 28px;
+        width: 28px;
+    }
+    margin-right: 0;
+}

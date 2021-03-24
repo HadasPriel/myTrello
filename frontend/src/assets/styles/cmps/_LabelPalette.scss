@@ -1,0 +1,76 @@
+.label-palette {
+    ul {
+        display: flex;
+        flex-direction: column;
+    }
+    li {
+        display: flex;
+    }
+    div {
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        height: 30px;
+        width: 250px;
+        margin-bottom: 5px;
+        transition: 0.3s;
+        color: #ffff;
+        font-weight: 600;
+        line-height: 32px;
+        padding: 0 10px;
+    }
+
+    .alredyOnCard::after {
+        font-family: "fa";
+        content: "\f00c";
+    }
+    .open-edit-label::after {
+        font-family: "fa";
+        content: "\f044";
+    }
+
+    .open-edit-label {
+        margin: 0 0 5px 5px;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .open-edit-label:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+    }
+
+    .\#61BD4F {
+        background-color: #61bd4f;
+    }
+    .\#61BD4F:hover {
+        box-shadow: -8px 0 #519839;
+    }
+    .\#F2D600 {
+        background-color: #f2d600;
+    }
+    .\#F2D600:hover {
+        box-shadow: -8px 0 #d9b51c;
+    }
+    .\#FF9F1A {
+        background-color: #ff9f1a;
+    }
+    .\#FF9F1A:hover {
+        box-shadow: -8px 0 #cd8313;
+    }
+    .\#EB5A46 {
+        background-color: #eb5a46;
+    }
+    .\#EB5A46:hover {
+        box-shadow: -8px 0 #b04632;
+    }
+    .\#C377E0 {
+        background-color: #c377e0;
+    }
+    .\#C377E0:hover {
+        box-shadow: -8px 0 #89609e;
+    }
+    .\#0079BF {
+        background-color: #0079bf;
+    }
+    .\#0079BF:hover {
+        box-shadow: -8px 0 #055a8c;
+    }
+}

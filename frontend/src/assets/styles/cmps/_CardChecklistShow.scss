@@ -1,0 +1,90 @@
+.card-checklist-show {
+    .checklist-title::before {
+        font-family: fa;
+        // content: "\f14a";
+        content: "\f00c";
+    }
+    .checklist-wraper {
+        margin-bottom: 20px;
+    }
+    span {
+        color: #5e6c84;
+        font-size: 11px;
+        line-height: 10px;
+        margin-right: 10px;
+    }
+
+    .progress-wraper,
+    .progress-inner {
+        height: 8px;
+        margin: 0;
+        border-radius: 2em;
+    }
+
+    .progress-wraper {
+        width: 500px;
+        background: rgba(9, 30, 66, 0.08);
+    }
+    .progress-inner {
+        background: #5ba4cf;
+        transition: 1s;
+    }
+    .progress-inner.done {
+        background: #61bd4f;
+    }
+
+    li {
+        width: 100%;
+        border-radius: 3px;
+    }
+    li.todo-show:hover {
+        background-color: rgba(9, 30, 66, 0.04);
+    }
+    form {
+        padding-left: 30px;
+    }
+    input {
+        padding: 8px 12px;
+        display: inline-block;
+        margin-right: 10px;
+    }
+    button {
+        display: inline-block;
+    }
+    .edit-btn {
+        margin: 0;
+    }
+    h4 {
+        display: inline;
+    }
+}
+
+li.todo-show {
+    display: flex;
+    h3 {
+        display: inline-block;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+    h3.true {
+        text-decoration: line-through;
+    }
+}
+
+.card-show {
+    header {
+        margin: 0;
+    }
+
+    .edit-btn {
+        font-size: 14px;
+        background: #e2e4e9;
+        color: #172b4d;
+        text-align: left;
+        max-width: 300px;
+        border-radius: 3px;
+        padding: 6px 12px;
+        border: 0;
+    }
+}

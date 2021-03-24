@@ -1,0 +1,74 @@
+.side-menu-sub-item {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    z-index: 4;
+    background-color: #f4f5f7;
+    padding: 12px;
+    font-weight: 600;
+
+    .menu-container {
+        color: #172b4d;
+
+        width: 100%;
+        div,
+        p {
+            margin: 0;
+        }
+
+        .menu-item {
+            font-weight: 600;
+            font-size: 14px;
+            line-height: 20px;
+            padding: 10px 5px;
+            cursor: pointer;
+            text-transform: capitalize;
+        }
+
+        .made-by::before {
+            font-family: "fa";
+            content: "\f007";
+            margin-right: 10px;
+        }
+        .board-name::before {
+            font-family: "fa";
+            content: "\f0db";
+            margin-right: 10px;
+        }
+        section {
+            margin-bottom: 20px;
+        }
+
+        span {
+            color: #172b4d;
+            font-size: 15px;
+        }
+        .user-img.sub {
+            margin-right: 20px;
+            height: 50px;
+            width: 50px;
+        }
+        p.board-name-edit {
+            cursor: pointer;
+            font-family: "TechMono";
+        }
+        span.board-name-edit {
+            color: #5e6c84;
+            font-size: 12px;
+            font-weight: 200;
+            display: block;
+            margin-left: 5px;
+        }
+    }
+    .edit-board-title {
+        input {
+            font-family: "TechMono";
+            padding: 5px 10px;
+            font-weight: 600;
+            margin: 0;
+            font-size: 16px;
+        }
+    }
+}

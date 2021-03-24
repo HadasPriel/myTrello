@@ -1,0 +1,444 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+.home-wraper {
+    // width: 100vw;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: 0;
+
+    .homepage-header {
+        width: 100vw;
+        padding: 10px;
+        background-color: rgb(0, 0, 0);
+        color: rgb(255, 254, 254);
+        font-family: "Share Tech Mono", monospace;
+        font-size: 1rem;
+        .login-icon {
+            margin-right: 20px;
+            font: size 1.2rem;
+            text-align: right;
+            margin-top: 10px;
+        }
+
+        // .user-avatar{
+        //     width: 32px;
+        //     height: 32px;
+        //     margin-right:20px;
+        //     margin-left: 97%;
+        //     margin-bottom: 10px;
+        //     border-radius: 50%;
+        //     padding: 5px;
+        // }
+    }
+
+    .home-img-container {
+        // width: 100vw;
+        height: 100vh;
+        background-size: cover;
+        background-position-x: center;
+        background-repeat: no-repeat;
+        // background-color: #9a9a9a;
+        //  background-color: white;
+        background-color: #3078a8;
+        text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+        padding: 10px;
+        background-position: 49% -640%;
+        background-size: 1190px 1236px;
+        // background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.3)), url("/assets/styles/imgs/homebg-removebg.png");
+        background-image: url("/assets/styles/imgs/homebg-removebg.png");
+
+        animation: gradient 14s ease infinite;
+
+        .scroll-down {
+            position: absolute;
+            top: 80vh;
+            left: 50%;
+            transform: translateX(-50%);
+            background: none;
+            cursor: pointer;
+            outline: none;
+
+            &::after {
+                content: "\f13a";
+                font-family: "fa";
+                font-size: 5rem;
+                color: white;
+            }
+        }
+
+        @keyframes gradient {
+            0% {
+                background-position: 49% -500%;
+            }
+            50% {
+                background-position: 49% -640%;
+            }
+            100% {
+                background-position: 49% -500%;
+            }
+        }
+        @media (max-height: 969px) {
+            background-size: 952px 988px;
+        }
+
+        @media (max-height: 923px) {
+            background-size: 952px 988px;
+        }
+
+        @media (max-height: 577px) {
+            background-size: 761px 790px;
+        }
+
+        @media (max-width: $mobile-breakpoint) {
+            background-position: 52% 200%;
+            background-size: 510px 530px;
+            height: 100vh;
+            @keyframes gradient {
+                0% {
+                    background-position: 49% 70%;
+                }
+
+                50% {
+                    background-position: 49% 100%;
+                }
+
+                100% {
+                    background-position: 49% 70%;
+                }
+            }
+            .scroll-down {
+                position: absolute;
+                top: 75vh;
+            }
+        }
+
+        .get-started-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 4%;
+            h1 {
+                font-family: "Share Tech Mono", monospace;
+                font-size: 60px;
+                color: $clr6;
+                text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+                text-align: center;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 50px;
+                    vertical-align: baseline;
+                }
+            }
+
+            h3 {
+                font-family: "Roboto", sans-serif;
+                // background-color: $clr2;
+                color: $clr6;
+                font-size: 28px;
+                font-weight: 200;
+                padding: 20px;
+                text-align: center;
+                // text-shadow: 2px 1px 2px rgb(137, 136, 137);
+                margin-top: -50px;
+
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 20px;
+                }
+            }
+            .get-started-btn {
+                margin: auto;
+                transition: 0.8s ease-in-out;
+            }
+
+            .MuiButton-containedPrimary {
+                color: #fff;
+                background-color: #7f2c3f;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            .get-started {
+                width: 330px;
+                height: 35px;
+                margin: auto;
+                // &:hover {
+                //     transform: scale(1.2);
+                // }
+            }
+        }
+    }
+
+    .welcome-container {
+        max-width: 1200px;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        margin: auto;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        article {
+            transition: width 2s;
+
+            border: 10px black;
+        }
+
+        .welcome1 {
+            box-shadow: 0 1px 0 rgba(56, 65, 80, 0.25);
+            border-radius: 10px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            margin-bottom: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            // transition: 00.2s ease-in-out;
+            @media (max-width: $mobile-breakpoint) {
+                flex-direction: column;
+            }
+
+            h2 {
+                font-family: "Share Tech Mono", monospace;
+                letter-spacing: -2px;
+                font-size: 2.2rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 2rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.4rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 1.2rem;
+                }
+            }
+        }
+
+        .welcome1:hover {
+            background: #000;
+            h2 {
+                color: white;
+                text-decoration: none;
+            }
+            h3 {
+                color: white;
+                text-decoration: none;
+            }
+        }
+
+        a:visited {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: none;
+        }
+
+        .right-side {
+            width: 50%;
+            @media (max-width: $mobile-breakpoint) {
+                width: 100%;
+            }
+        }
+
+        .left-side {
+            width: 50%;
+            @media (max-width: $mobile-breakpoint) {
+                width: 100%;
+            }
+        }
+
+        .welcome2 {
+            box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+            border-radius: 3px;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            // transition: 00.4s ease-in-out;
+            @media (max-width: $mobile-breakpoint) {
+                flex-direction: column;
+            }
+
+            h2 {
+                font-family: "Share Tech Mono", monospace;
+                letter-spacing: -2px;
+                font-size: 2.2rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 2rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.4rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &.welcome2:hover {
+                background: #000;
+                h2 {
+                    color: white;
+                }
+                h3 {
+                    color: white;
+                }
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+        .welcome3 {
+            box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-bottom: 20px;
+            margin-right: 10px;
+            margin-left: 10px;
+            border-radius: 10px;
+            // transition: 00.4s ease-in-out;
+            @media (max-width: $mobile-breakpoint) {
+                flex-direction: column;
+            }
+
+            h2 {
+                font-family: "Share Tech Mono", monospace;
+                letter-spacing: -2px;
+                font-size: 2.2rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 2rem;
+                }
+            }
+
+            h3 {
+                font-size: 1.4rem;
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 1.2rem;
+                }
+            }
+
+            &.welcome3:hover {
+                background: #000;
+                h2 {
+                    color: white;
+                }
+                h3 {
+                    color: white;
+                }
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+        }
+
+        .img1 {
+            width: 100%px;
+            border-radius: 10px;
+            margin: auto;
+        }
+
+        .img2 {
+            width: 100%px;
+            border-radius: 10px;
+            margin: auto;
+        }
+        .img3 {
+            width: 100%px;
+            border-radius: 10px;
+            margin: auto;
+        }
+        h2 {
+            font-size: 2rem;
+            color: #3d3d3d;
+            text-transform: uppercase;
+            padding: 10px;
+            margin: 2px 0 0em;
+            text-align: center;
+        }
+
+        h3 {
+            // width: 50%;
+            color: #3d3d3d;
+            font-family: "Roboto", sans-serif;
+
+            text-align: center;
+            font-size: 1.5rem;
+            padding: 10px;
+            margin-bottom: 0px;
+
+            @media (max-width: $mobile-breakpoint) {
+                font-size: 1.2rem;
+            }
+        }
+    }
+
+    .boards-container {
+        width: 100%;
+        margin-top: 5px;
+    }
+}
+
+.footer {
+    // width: 100vw;
+    height: 50px;
+    position: absolute;
+    right: 0;
+    left: 0;
+    z-index: 1;
+    background: #000;
+    color: white;
+    display: flex;
+    justify-content: center;
+
+    h4 {
+        margin-top: 17px;
+        font-size: 1rem;
+        color: #adadad;
+        font-weight: 100;
+        text-align: center;
+        margin-right: 20px;
+        text-transform: uppercase;
+    }
+
+    // h4::after {
+    //     margin-left:10px;
+    //     cursor: pointer;
+    //     font-family: "fa";
+    //     content: "\f0e0";
+
+    // }
+
+    // h4::after {
+    //     margin-left:10px;
+    //     font-family: "fa";
+    //     content: "\f08c";
+    // }
+}

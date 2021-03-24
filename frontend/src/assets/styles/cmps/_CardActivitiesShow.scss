@@ -1,0 +1,27 @@
+.card-activities-show {
+    li {
+        display: flex;
+        padding: 8px 0;
+        font-size: 14px;
+        line-height: 20px;
+        color: #172b4d;
+
+        span {
+            font-weight: 700;
+            margin-right: 5px;
+        }
+    }
+
+    .user-img {
+        margin-right: 10px;
+    }
+}
+
+.user-img {
+    display: inline-block;
+    height: 32px;
+    width: 32px;
+    border-radius: 2em;
+    background-size: cover;
+    background-position: center;
+}

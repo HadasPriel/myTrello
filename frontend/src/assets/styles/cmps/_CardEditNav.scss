@@ -1,0 +1,50 @@
+.card-edit-nav {
+    padding: 0 16px 8px 8px;
+    min-width: 168px;
+
+    & > * {
+        margin: 0 0 8px 0;
+    }
+
+    h3 {
+        color: #5e6c84;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+    }
+
+    button {
+        font-size: 14px;
+        background-color: rgba(9, 30, 66, 0.04);
+        color: #172b4d;
+        text-align: left;
+        max-width: 300px;
+        border-radius: 3px;
+        padding: 6px 12px;
+        border: 0;
+    }
+    button:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+    }
+}
+
+.label-fa::before {
+    font-family: "fa";
+    content: "\f02b";
+}
+.checklist-fa::before {
+    font-family: "fa";
+    content: "\f00c";
+}
+.cover-fa::before {
+    font-family: "fa";
+    content: "\f2d0";
+}
+.duetime-fa::before {
+    font-family: "fa";
+    content: "\f017";
+}
+.delete-fa::before {
+    font-family: "fa";
+    content: "\f2ed";
+}

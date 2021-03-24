@@ -1,0 +1,178 @@
+.screen {
+    cursor: pointer;
+    background: rgba(0, 0, 0, 0.64);
+    position: fixed;
+    z-index: 5;
+    top: 0;
+    right: 0;
+    width: 100%;
+    height: 100%;
+    overflow-y: auto;
+    overflow-x: hidden;
+    display: flex;
+    justify-content: center;
+}
+
+.card-edit {
+    min-height: 600px;
+    height: fit-content;
+    position: relative;
+    z-index: 3;
+    margin: 80px 0;
+    width: 770px;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 400;
+    background-color: #f4f5f7;
+    border-radius: 5px;
+    cursor: auto;
+
+    // @media (max-width: $mobile-breakpoint){
+    //     max-width: 360px;
+    // }
+
+    header.edit-header {
+        button {
+            font-size: 20px;
+            background-color: rgba(0, 0, 0, 0);
+            color: #172b4d;
+            position: absolute;
+        }
+
+        .close::after {
+            content: "\f00d";
+            font-family: fa;
+        }
+
+        .title-sign::before {
+            content: "\f2d0";
+            font-family: fa;
+            margin-right: 20px;
+        }
+        .close {
+            top: 0;
+            right: 0;
+            margin: 4px;
+            padding: 10px;
+        }
+        .title-sign {
+            top: 0;
+            left: 0;
+            margin-top: 12px;
+            margin-left: 20px;
+        }
+
+        h1 {
+            color: #172b4d;
+            font-size: 20px;
+        }
+    }
+    .description-sign::before {
+        font-family: "fa";
+        content: "\f036";
+        margin-right: 20px;
+    }
+    .activity-sign::before {
+        font-family: "fa";
+        content: "\f0ca";
+        margin-right: 20px;
+    }
+
+    main {
+        padding: 0 8px 8px 16px;
+        width: 100%;
+    }
+    h4 {
+        font-size: 16px;
+        line-height: 20px;
+    }
+    h5 {
+        color: #5e6c84;
+        font-size: 12px;
+        font-weight: 500;
+        text-transform: uppercase;
+        display: inline-block;
+    }
+    button.add-btn {
+        background-color: #5aac44;
+        color: #fff;
+    }
+
+    nav {
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .permanent {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        .nav-mini-show {
+            display: flex;
+            flex-wrap: wrap;
+        }
+    }
+    .show {
+        margin: 0 0 15px 50px;
+        &.description {
+            cursor: pointer;
+        }
+    }
+    .duedate,
+    .members {
+        margin-left: 20px;
+    }
+
+    .description {
+        padding: 8px 12px;
+        background-color: rgba(9, 30, 66, 0.04);
+        border-radius: 3px;
+        width: 510px;
+        min-height: 55px;
+    }
+
+    .description:hover {
+        background-color: rgba(9, 30, 66, 0.08);
+    }
+    &.top {
+        padding-top: 0;
+    }
+
+    &.top::before {
+        padding: 25px 385px;
+        border-radius: 3px 3px 0 0;
+        position: relative;
+        // left: -5px;
+        top: -40px;
+        content: "";
+    }
+    &.t\#7bc86c::before {
+        background-color: #7bc86c;
+    }
+    &.t\#f5dd29::before {
+        background-color: #f5dd29;
+    }
+    &.t\#ffaf3f::before {
+        background-color: #ffaf3f;
+    }
+    &.t\#ef7564::before {
+        background-color: #ef7564;
+    }
+    &.t\#cd8de5::before {
+        background-color: #cd8de5;
+    }
+    &.t\#5ba4cf::before {
+        background-color: #5ba4cf;
+        color: #ffff;
+    }
+    &.t\#29cce5::before {
+        background-color: #29cce5;
+    }
+    &.t\#6deca9::before {
+        background-color: #6deca9;
+    }
+    &.t\#ff8ed4::before {
+        background-color: #ff8ed4;
+    }
+    &.t\#172b4d::before {
+        background-color: #172b4d;
+    }
+}

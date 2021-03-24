@@ -1,0 +1,234 @@
+.card-preview {
+    position: relative;
+    // width: 250px;
+    min-height: 40px;
+    background-color: #fff;
+    margin-bottom: 8px;
+    padding: 5px;
+    border: 0px;
+    border-radius: 3px;
+    box-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    outline: none;
+
+    &.top {
+        padding-top: 0;
+    }
+
+    &.top::before {
+        padding: 5px 128px;
+        border-radius: 3px 3px 0 0;
+        position: relative;
+        left: -5px;
+        content: "";
+        padding-bottom: 2px;
+    }
+
+    &.t\#7bc86c::before {
+        background-color: #7bc86c;
+    }
+    &.t\#f5dd29::before {
+        background-color: #f5dd29;
+    }
+    &.t\#ffaf3f::before {
+        background-color: #ffaf3f;
+    }
+    &.t\#ef7564::before {
+        background-color: #ef7564;
+    }
+    &.t\#cd8de5::before {
+        background-color: #cd8de5;
+    }
+    &.t\#5ba4cf::before {
+        background-color: #5ba4cf;
+        color: #ffff;
+    }
+    &.t\#29cce5::before {
+        background-color: #29cce5;
+    }
+    &.t\#6deca9::before {
+        background-color: #6deca9;
+    }
+    &.t\#ff8ed4::before {
+        background-color: #ff8ed4;
+    }
+    &.t\#172b4d::before {
+        background-color: #172b4d;
+    }
+
+    .delete-s {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 11px;
+        color: #5e6c84;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .delete-s::before {
+        font-family: "fa";
+        content: "\f2ed";
+    }
+
+    &:hover .delete-s {
+        visibility: visible;
+    }
+
+    .edit-s {
+        visibility: hidden;
+        position: absolute;
+        top: 0;
+        right: 0;
+        font-size: 11px;
+        color: #5e6c84;
+        background-color: rgba(255, 255, 255, 0);
+    }
+    .edit-s::before {
+        font-family: "fa";
+        content: "\f304";
+    }
+
+    &:hover .edit-s {
+        visibility: visible;
+    }
+
+    // .edit-s::before {
+    //     font-family: "fa";
+    //     content: "\f044";
+    // }
+
+    button.delete-card {
+        border-radius: 50%;
+        padding: 5px 9px;
+        background-color: #fff;
+        color: rgb(101, 101, 101);
+        &:hover {
+            background-color: #f4f5f7;
+        }
+    }
+
+    button.delete-card::after {
+        font-family: "fa";
+        content: "\f2ed";
+    }
+
+    p {
+        max-width: 230px;
+        margin: 0 0 4px;
+        overflow: hidden;
+        color: #172b4d;
+        cursor: pointer;
+        font-size: 14px;
+        line-height: 20px;
+        font-weight: 400;
+    }
+
+    img {
+        border-radius: 3px;
+    }
+
+    .label {
+        height: 8px;
+        width: 40px;
+        margin-right: 2px;
+        border-radius: 2em;
+    }
+
+    nav {
+        font-size: 12px;
+        color: #5e6c84;
+
+        .checklistSign::before {
+            font-family: fa;
+            content: "\f00c";
+        }
+    }
+
+    .duetime-fa-min {
+        display: inline-block;
+        // font-size: 10px;
+        color: #5e6c84;
+        margin: 0;
+        // color: red;
+    }
+    .sign {
+        margin-right: 15px;
+    }
+
+    .descriptionSign::before {
+        font-family: "fa";
+        content: "\f036";
+    }
+
+    &:hover {
+        background-color: #f4f5f7;
+
+        &.\#7bc86c {
+            background-color: #7bc86c;
+        }
+        &.\#f5dd29 {
+            background-color: #f5dd29;
+        }
+        &.\#ffaf3f {
+            background-color: #ffaf3f;
+        }
+        &.\#ef7564 {
+            background-color: #ef7564;
+        }
+        &.\#cd8de5 {
+            background-color: #cd8de5;
+        }
+        &.\#5ba4cf {
+            background-color: #5ba4cf;
+            color: #ffff;
+        }
+        &.\#29cce5 {
+            background-color: #29cce5;
+        }
+        &.\#6deca9 {
+            background-color: #6deca9;
+        }
+        &.\#ff8ed4 {
+            background-color: #ff8ed4;
+        }
+        &.\#172b4d {
+            background-color: #172b4d;
+        }
+    }
+
+    .\#7bc86c {
+        background-color: #7bc86c;
+    }
+    .\#f5dd29 {
+        background-color: #f5dd29;
+    }
+
+    .\#ffaf3f {
+        background-color: #ffaf3f;
+    }
+    .\#ef7564 {
+        background-color: #ef7564;
+    }
+    .\#cd8de5 {
+        background-color: #cd8de5;
+    }
+    .\#5ba4cf {
+        background-color: #5ba4cf;
+        color: #ffff;
+    }
+    .\#29cce5 {
+        background-color: #29cce5;
+    }
+    .\#6deca9 {
+        background-color: #6deca9;
+    }
+    .\#ff8ed4 {
+        background-color: #ff8ed4;
+    }
+    .\#172b4d {
+        background-color: #172b4d;
+    }
+}
+
+.cover.min .card-preview {
+    margin-top: 100px;
+}

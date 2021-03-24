@@ -1,0 +1,61 @@
+.card-label-show {
+    display: flex;
+    margin-bottom: 4px;
+    margin-top: 4px;
+
+    .label-edit {
+        display: flex;
+        text-align: left;
+        height: 25px;
+        min-width: 60px;
+        border-radius: 3px;
+        padding: 0 12px;
+        margin-right: 12px;
+
+        button {
+            color: #ffff;
+            position: relative;
+            left: 90%;
+            background-color: rgba(255, 0, 0, 0);
+            padding: 0;
+            margin: 0;
+        }
+        .label-title {
+            color: #ffff;
+            font-weight: 600;
+            line-height: 15px;
+            margin: 0;
+        }
+    }
+    .hover-nav {
+        visibility: hidden;
+    }
+
+    li:hover .hover-nav {
+        visibility: visible;
+    }
+
+    .\#61BD4F {
+        background-color: #61bd4f;
+    }
+
+    .\#F2D600 {
+        background-color: #f2d600;
+    }
+
+    .\#FF9F1A {
+        background-color: #ff9f1a;
+    }
+
+    .\#EB5A46 {
+        background-color: #eb5a46;
+    }
+
+    .\#C377E0 {
+        background-color: #c377e0;
+    }
+
+    .\#0079BF {
+        background-color: #0079bf;
+    }
+}

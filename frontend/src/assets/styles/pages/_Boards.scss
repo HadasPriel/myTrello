@@ -1,0 +1,138 @@
+@import url("https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap");
+
+.boards {
+    background-color: #3078a8;
+    
+    text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+    padding: 30px;
+    flex-grow: 1;
+    color: $clr6;
+
+
+    h1 {
+        margin: auto;
+        font-family: "TechMono";
+        font-size: 60px;
+        color:white;
+        text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
+        text-align: center;
+        @media (max-width: $mobile-breakpoint) {
+            font-size: 50px;
+        }
+        span {
+            font-size: 14px;
+        }
+    }
+
+    h2{
+        // text-transform: uppercase;
+        color:white;
+        margin-top:8px;
+        padding: 10px;
+    }
+
+    .board-preview p{
+        padding: 5px;
+    }
+
+    .add-board-btn {
+        display: inline-block;
+        height: 95px;
+        width: 170px;
+        background-color: #5e6c84;
+    }
+    button {
+        font-size: 1rem;
+        border-radius: 3px;
+        height: 95px;
+        width: 170px;
+        background-color: #1e1e1e;
+        outline:none;
+        transition: 0.08sn ease-in-out;
+    }
+
+    button:hover {
+        background-color: #50C13B;
+    }
+
+    h2 {
+        font-size: 25px;
+        margin: 0;
+        padding: 0;
+        text-align: center;
+        margin-bottom: 10px;
+    }
+
+    .boards-image{
+        width: 70%;
+        display: flex;
+        margin: auto;
+        border-radius: 3px;
+        margin-bottom: 20px;
+        margin-top: 20px;
+    }
+
+    hr{
+        width: 70%;
+    }
+
+    section {
+        margin-bottom: 20px;
+  
+        text-align: center;
+        h3{
+            color: white;
+
+        }
+        // display: flex;
+        // justify-content: center;
+
+    }
+
+    .your-boards{
+        display: flex;
+        justify-content: center;
+
+    }
+    .boards-container {
+        .board-get-started-container {
+            display: flex;
+            flex-direction: column;
+            position: relative;
+            top: 4%;
+            h1 {
+                font-family: "Share Tech Mono", monospace;
+                font-size: 60px;
+            }
+            h1::before {
+                font-size: 52px;
+                padding-right: 5px;
+
+                font-family: "fa";
+                content: "\f14a";
+            }
+
+            p{
+                padding: 5px;
+            }
+
+          
+
+            h3 {
+                font-family: "Roboto", sans-serif;
+                // background-color: $clr2;
+                color: $clr6;
+                font-size: 28px;
+                font-weight: 200;
+                padding: 20px;
+                text-align: center;
+                text-shadow: 2px 1px 2px rgb(137, 136, 137);
+                margin-top: -50px;
+
+                @media (max-width: $mobile-breakpoint) {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

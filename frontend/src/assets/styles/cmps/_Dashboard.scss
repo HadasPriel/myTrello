@@ -1,0 +1,58 @@
+.dashboard {
+    position: absolute;
+    top: 50px;
+    right: 50%;
+    transform: translate(50%);
+    z-index: 30;
+    height: 90vh;
+    width: 90vw;
+    background-color: #4d4d4d;
+    color: #ffff;
+    padding: 8px;
+    overflow: auto;
+    border-radius: 3px;
+    header {
+        h1 {
+            line-height: 20px;
+            margin: 16px 0;
+            font-size: 16px;
+            text-align: center;
+            color: #ffff;
+        }
+
+        .close-menu {
+            font-size: 18px;
+            font-weight: 700;
+            background-color: rgba(255, 255, 255, 0);
+            position: absolute;
+            top: 0;
+            right: 0;
+        }
+    }
+    main {
+        .summery {
+            display: flex;
+            justify-content: space-around;
+            margin-bottom: 20px;
+            p {
+                margin-inline-end: 30px;
+                text-align: center;
+                font-size: 14px;
+                span {
+                    font-size: 16px;
+                    display: block;
+                }
+            }
+        }
+        .data {
+            padding: 50px 50px;
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+
+            & > * {
+                margin-bottom: 50px;
+            }
+        }
+    }
+}
