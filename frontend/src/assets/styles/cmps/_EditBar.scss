@@ -1,8 +1,10 @@
+.edit-list {
+    position: relative;
+}
+
 .edit-bar {
-    // width: fit-content;
     position: absolute;
-    right: -20px;
-    top: 44px;
+    left: 3px;
     background: #fff;
     border-radius: 3px;
     box-shadow: 0 8px 16px -4px rgba(9, 30, 66, 0.25), 0 0 0 1px rgba(9, 30, 66, 0.08);
@@ -49,6 +51,17 @@
         background-color: #cf513d;
         width: 100%;
     }
+
+    @include for-narrow-layout {
+        left: 15px;
+        top: -10px;
+    }
+    @include for-normal-layout {
+        left: -110px;
+    }
+    @include for-wide-layout {
+        left: -95px;
+    }
 }
 
 .edit-btn {
@@ -60,8 +73,8 @@
     border-radius: 3px;
     padding: 6px 12px;
     border: 0;
-    display:block;
-    margin-left:90%;
+    display: block;
+    margin-left: 90%;
 }
 .edit-btn:hover {
     background-color: rgba(9, 30, 66, 0.08);

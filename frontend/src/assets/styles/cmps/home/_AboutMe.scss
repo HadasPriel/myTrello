@@ -1,0 +1,86 @@
+.about-me {
+    background-color: rgb(36, 36, 36);
+    padding: 25px 8px;
+    header {
+        text-align: start;
+        font-size: 15px;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: rgba(255, 255, 255, 0.308) solid 1px;
+        h2 {
+            font-weight: 600;
+            color: #e5eaec;
+            text-transform: capitalize;
+            margin-bottom: 10px;
+        }
+        p {
+            margin: 0;
+        }
+    }
+    .cv-list {
+        flex-direction: column;
+    }
+    .cv {
+        font-size: 15px;
+    }
+    .cv:not(:last-child) {
+        // padding-bottom: 10px;
+        // margin-bottom: 15px;
+        // border-bottom: rgba(255, 255, 255, 0.308) solid 1px;
+        margin-block-end: 25px;
+    }
+    .user-img {
+        height: 150px;
+        width: 150px;
+        border-radius: 50%;
+        margin-block-end: 15px;
+    }
+
+    h3,
+    p,
+    a {
+        color: #e5eaec;
+    }
+
+    .skil {
+        margin: 0;
+        text-transform: capitalize;
+    }
+    .mail-address {
+        margin-bottom: 0px;
+        cursor: pointer;
+    }
+    .social-media {
+        margin-top: 15px;
+        a {
+            margin-inline-end: 3px;
+            border-radius: 50%;
+            padding: 5px;
+            &:hover {
+                background-color: rgba(255, 255, 255, 0.2);
+            }
+            &::after {
+                font-family: "fa-brands";
+            }
+            &.facebook::after {
+                content: "\f082";
+            }
+            &.linkedin::after {
+                content: "\f08c";
+            }
+            &.email::after {
+                font-family: "fa";
+                content: "\f0e0";
+            }
+        }
+    }
+
+    @include for-narrow-layout {
+        .cv-list {
+            flex-direction: row;
+        }
+        .cv:not(:last-child) {
+            margin-inline-end: 25px;
+        }
+    }
+}

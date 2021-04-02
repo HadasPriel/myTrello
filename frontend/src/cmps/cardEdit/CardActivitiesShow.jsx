@@ -1,13 +1,8 @@
-
-
 import React, { Component } from 'react'
 import { connect } from 'react-redux'
-
-// import { socketService } from '../services/socketService'
+import { ActivityTime } from './ActivityTime'
 
 class _CardActivitiesShow extends Component {
-
-
 
     render() {
         this.props.activities.filter(activity => {
@@ -17,9 +12,12 @@ class _CardActivitiesShow extends Component {
             <ul className="card-activities-show card-show show">
                 {this.props.activities.map(activity => {
                     if (activity.card.id === this.props.card.id) return (
-                        <li key={activity.id} >
+                        <li key={activity.id} className="flex align-center" >
                             <div className="user-img inline-block" style={{ backgroundImage: `url(${activity.byMember.imgUrl})` }}></div>
-                            <span>{activity.byMember.fullname} </span> {` ${activity.txt} to this card`}
+                            <div className="txt">
+                                <p><span>{activity.byMember.fullname} </span> {` ${activity.txt} to this card`}</p>
+                                <ActivityTime time={activity.createdAt} />
+                            </div>
                         </li>
 
                     )

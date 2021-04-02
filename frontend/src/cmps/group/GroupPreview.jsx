@@ -31,6 +31,7 @@ export class _GroupPreview extends Component {
         boardToUpdate.groups = updatedGroups
 
         const board = await this.props.updateBoard(boardToUpdate, msg)
+        return board
         // this.props.removeGroup(groupId, this.props.selectedBoard)
     }
 

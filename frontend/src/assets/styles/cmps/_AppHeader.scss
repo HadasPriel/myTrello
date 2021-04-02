@@ -9,7 +9,7 @@
         display: none;
     }
 
-    height: 40px;
+    height: $headerHeight;
     background-color: rgba(0, 0, 0, 0.32);
     padding: 4px;
     nav {
@@ -19,9 +19,9 @@
     }
     h5 {
         font-family: "TechMono", monospace;
-        font-size: 18px;
+        font-size: 16px;
         font-weight: 700;
-        line-height: 32px;
+        line-height: 16px;
         padding: 0 12px;
         color: #fff;
         margin: auto;
@@ -38,7 +38,7 @@
         font-size: 23px;
 
         color: rgba(255, 255, 255, 0.8);
-        line-height: 32px;
+        line-height: 16px;
         margin: auto;
         text-shadow: 0 1px 0 rgba(9, 30, 66, 0.25);
         @media (max-width: $narrow-breakpoint) {
@@ -49,15 +49,13 @@
     button,
     span,
     a {
-        display: inline-block;
         background-color: rgba(255, 255, 255, 0.3);
         color: #ffff;
         font-weight: 700;
-        line-height: 32px;
-        margin: 0 4px 0 0;
-        padding: 0 12px;
+        margin-inline-end: 4px;
+        padding: 2px 8px;
         border-radius: 3px;
-        font-size: 14px;
+        font-size: 12px;
     }
 
     input {
@@ -98,8 +96,8 @@
 
     .user-img {
         display: inline-block;
-        height: 32px;
-        width: 32px;
+        height: 29px;
+        width: 29px;
         border-radius: 2em;
         background-size: cover;
         background-position: center;

@@ -1,20 +1,16 @@
 .uploader {
     width: 300px;
-    background-color: #E0E3E8;
+    height: 300px;
     display: flex;
-
-
-    input{
-        visibility: hidden;
-    }
-
-    label{
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    label {
+        display: inline-block;
         cursor: pointer;
-        width: 300px;
+        padding: 10px 20px;
         background-color: white;
+        background-color: #e0e3e8;
         border-radius: 3px;
-        margin-left: 92px;
-        text-align: center;
-
     }
 }

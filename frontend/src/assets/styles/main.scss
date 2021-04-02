@@ -8,7 +8,6 @@
 @import "basics/helpers";
 @import "basics/layout";
 @import "basics/base";
-@import "basics/links";
 @import "basics/forms";
 
 // Components
@@ -46,6 +45,10 @@
 @import "cmps/Uploader";
 @import "cmps/SideMenuSubItem";
 @import "cmps/Dashboard";
+@import "cmps/home/HomeHero";
+@import "cmps/home/AboutMe";
+@import "cmps/home/AboutTasx";
+@import "cmps/ActivityTime";
 
 // pages
 

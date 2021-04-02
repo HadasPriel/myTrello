@@ -187,18 +187,19 @@ class _CardEdit extends Component {
                                     <div>{isChecklists && <div><CardChecklistShow checklists={card.checklists} card={card} updateCard={this.updateCard} /></div>}</div>
                                     <div>{isActivitiesShowing && <div> <h4 className="activity-sign">Activity </h4> <CardActivitiesShow activities={selectedBoard.activities} card={card} updateCard={this.updateCard} /></div>}</div>
                                 </main>
+                                <div className="edit-list">
+                                    {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} toggleLabelPalette={this.toggleLabelPalette} board={selectedBoard} updateBoard={this.props.updateBoard} />}
+                                    {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} toggleChecklistBar={this.toggleChecklistBar} />}
+                                    {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} toggleCoverBar={this.toggleCoverBar} />}
+                                    {this.state.isAddDeutimeShowing && <AddDeutimeBar card={card} updateCard={this.updateCard} toggleAddDeutime={this.toggleAddDeutime} addDeuDate={this.addDeuDate} />}
+                                    {this.state.isAddMembersShowing && <AddMembersBar card={card} updateCard={this.updateCard} toggleAddMembers={this.toggleAddMembers} users={users} />}
+                                    {this.state.isAddImgShowing && <AddImgBar card={card} updateCard={this.updateCard} toggleAddImg={this.toggleAddImg} addImg={this.addImg} />}
+                                    {this.state.isDeleteCardShowing && <DeleteCardBar cardId={card.id} boardId={selectedBoard._id} toggleDeleteCard={this.toggleDeleteCard} onRemoveCard={onRemoveCard} />}
+                                </div>
                                 <CardEditNav card={card} toggleLabelPalette={this.toggleLabelPalette} toggleChecklistBar={this.toggleChecklistBar} toggleCoverBar={this.toggleCoverBar}
                                     toggleAddDeutime={this.toggleAddDeutime} toggleAddImg={this.toggleAddImg} toggleAddMembers={this.toggleAddMembers} toggleDeleteCard={this.toggleDeleteCard} />
                             </div>
 
-
-                            {this.state.isLabelPaletteShowing && <LabelPalette card={card} updateCard={this.updateCard} toggleLabelPalette={this.toggleLabelPalette} board={selectedBoard} updateBoard={this.props.updateBoard} />}
-                            {this.state.isAddChecklistShowing && <AddChecklistBar card={card} updateCard={this.updateCard} toggleChecklistBar={this.toggleChecklistBar} />}
-                            {this.state.isCoverShowing && <AddCoverBar card={card} updateCard={this.updateCard} toggleCoverBar={this.toggleCoverBar} />}
-                            {this.state.isAddDeutimeShowing && <AddDeutimeBar card={card} updateCard={this.updateCard} toggleAddDeutime={this.toggleAddDeutime} addDeuDate={this.addDeuDate} />}
-                            {this.state.isAddMembersShowing && <AddMembersBar card={card} updateCard={this.updateCard} toggleAddMembers={this.toggleAddMembers} users={users} />}
-                            {this.state.isAddImgShowing && <AddImgBar card={card} updateCard={this.updateCard} toggleAddImg={this.toggleAddImg} addImg={this.addImg} />}
-                            {this.state.isDeleteCardShowing && <DeleteCardBar cardId={card.id} boardId={selectedBoard._id} toggleDeleteCard={this.toggleDeleteCard} onRemoveCard={onRemoveCard} />}
                         </section>
                     </div>
                 </div>

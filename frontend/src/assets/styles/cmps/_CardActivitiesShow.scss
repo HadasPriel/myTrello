@@ -10,6 +10,13 @@
             font-weight: 700;
             margin-right: 5px;
         }
+        p {
+            margin: 0;
+        }
+        .time {
+            color: $clr1;
+            font-size: 13px;
+        }
     }
 
     .user-img {

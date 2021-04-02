@@ -1,0 +1,77 @@
+.about-tasx {
+    padding: 0 8px;
+    .about-unit {
+        flex-direction: column;
+        text-align: start;
+        margin-bottom: 30px;
+    }
+    .txt {
+        h3 {
+            font-family: TechMono;
+            font-size: 30px;
+        }
+    }
+    img {
+        width: 300px;
+        object-fit: cover;
+        border-radius: 8px;
+        margin-bottom: 50px;
+    }
+    .cta {
+        text-align: center;
+        border-radius: 8px;
+        padding: 20px;
+        background-color: rgb(240, 240, 240);
+        h3 {
+            margin: 0;
+        }
+        p {
+            margin: 0;
+        }
+        .start-btn {
+            padding: 15px 60px;
+            background-color: $clr5;
+            font-weight: 400;
+            font-size: 18px;
+            border-radius: 3px;
+            text-transform: uppercase;
+            margin: 20px 0 0 0;
+            &:hover {
+                background-color: #51c13a;
+            }
+        }
+    }
+    @include for-narrow-layout {
+        .about-unit {
+            flex-direction: row;
+            &.reverse {
+                flex-direction: row-reverse;
+            }
+        }
+        img {
+            padding-inline-start: 50px;
+            margin-bottom: 0;
+
+            &.reverse {
+                padding-inline-start: 0;
+                padding-inline-end: 50px;
+            }
+        }
+        .cta {
+            text-align: start;
+            .start-btn {
+                margin: 0 0 0 30px;
+            }
+        }
+    }
+    @include for-normal-layout {
+        img {
+            width: 350px;
+        }
+    }
+    @include for-wide-layout {
+        img {
+            width: 500px;
+        }
+    }
+}

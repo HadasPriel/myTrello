@@ -16,23 +16,22 @@ export class Uploader extends Component {
     // this.props.onFinishUpload(secure_url)
   }
   render() {
-    const { imgUrl, isUploading, height, width } = this.state
+    // const { imgUrl, isUploading, height, width } = this.state
+    const { imgUrl, isUploading } = this.state
     const uploadStyle = {
       backgroundImage: `url(${imgUrl})`,
-      height: height + 'px',
-      width: width + 'px',
       objectFit: 'cover'
     }
     return (
       <div className="uploader flex align-center justify-center"
-        style={ uploadStyle }>
+        style={uploadStyle}>
 
         <label htmlFor="imageUploader">
-          { isUploading ? 'Uploading....' : 'Upload Image' }
+          {isUploading ? 'Uploading....' : 'Upload Image'}
         </label>
+        <input onChange={this.onUploadImg}
+          type="file" accept="image/*" id="imageUploader" style={{ display: "none" }} />
 
-        <input onChange={ this.onUploadImg } 
-          type="file" accept="image/*" id="imageUploader" />
       </div>
     )
   }

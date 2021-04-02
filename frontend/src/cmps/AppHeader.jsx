@@ -33,7 +33,6 @@ class _AppHeader extends Component {
                         <Link to="/board" className="header-board"> Boards </Link>
                         <span className=" normal-media">
                             <label>
-                                {/* <input className="header-filter"></input> */}
                                 <BoardFilter />
                             </label>
                         </span>
@@ -41,19 +40,17 @@ class _AppHeader extends Component {
                     <h3 className="header-logo">TASX</h3>
 
                     <nav className="navbar-links flex space-between align-center">
-                        <button className="header-about-us normal-media"> About Us</button>
-                        <span className="user-img" style={this.state.userImgStyle}></span>
+                        <Link to="/home" className="header-about-us normal-media">About Us</Link>
+                        <Link to="/login" className="user-img" style={this.state.userImgStyle}></Link>
                     </nav>
-                    {/* <button className="user-avatar">HS</button> */}
                 </header>
                 <header className="narrow-media app-header flex space-between align-center">
                     <span>
                         <label>
-                            {/* <input className="header-filter"></input> */}
                             <BoardFilter />
                         </label>
                     </span>
-                    <button className="header-about-us"> About Us</button>
+                    <Link to="/home" className="header-about-us">About Us</Link>
 
                 </header>
                 <header className="app-header board-header flex space-between align-center">
@@ -66,8 +63,6 @@ class _AppHeader extends Component {
                         <button className="header-show-menu" onClick={toggleSideMenu}> Show Menu</button>
 
                     </nav>
-                    {/* <button className="user-avatar">HS</button> */}
-
                 </header>
             </div>
         )

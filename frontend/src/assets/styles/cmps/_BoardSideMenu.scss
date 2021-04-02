@@ -25,17 +25,24 @@
         text-align: center;
     }
     &.open {
-        width: 340px;
+        width: 300px;
         padding: 12px;
+        @include for-narrow-layout {
+            width: 340px;
+        }
+        .close-menu {
+            display: inline-block;
+        }
     }
     header {
-        // position: fixed;
+        margin-bottom: 30px;
         .close-menu {
             color: #172b4d;
             background-color: rgba(255, 255, 255, 0);
             position: absolute;
             top: 0;
             right: 0;
+            display: none;
         }
 
         h1 {
@@ -131,13 +138,14 @@
     }
 
     .activity-preview {
-        display: flex;
-        align-items: center;
         margin-bottom: 10px;
         flex-wrap: wrap;
 
         .user-img {
             margin-right: 5px;
+        }
+        p {
+            margin: 0;
         }
         .user-name {
             margin-right: 5px;

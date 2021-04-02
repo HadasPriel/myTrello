@@ -5,15 +5,18 @@ export function loadBoards(filterBy = {}) {
   return async dispatch => {
     try {
       const boards = await boardService.query(filterBy)
-      dispatch({ type: 'SET_BOARDS', boards })
+      if (filterBy.userId === '6004748cf9fd65ff47dc81e4') {
+        console.log('here');
+        console.log(boards);
+        dispatch({ type: 'SET_TEMPLATES', boards })
+      }
+      else dispatch({ type: 'SET_BOARDS', boards })
 
     } catch (err) {
       console.log('BoardActions: err in loadBoards', err)
     }
   }
 }
-
-
 
 export function loadBoard(id) {
   return async dispatch => {

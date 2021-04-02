@@ -6,11 +6,13 @@ export function BoardPreview(props) {
     const style = { boardStyle: { ...board.style } }
 
     return (
-        <li className="board-preview"
-            style={{ backgroundImage: `url(${style.boardStyle.bgurl})` }}>
-            <Link to={`/board/${board._id}`}>
-                <p>{board.title}</p>
-            </Link>
-        </li>
+        <Link to={`/board/${board._id}`}>
+            <li className="board-preview"
+                style={{ backgroundImage: `url(${style.boardStyle.bgurl})` }}>
+                <div className="content">
+                    <p>{board.title}</p>
+                </div>
+            </li>
+        </Link>
     )
 }

@@ -1,0 +1,26 @@
+.home-hero {
+    background-image: url(../../../imgs/hero.jpg);
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: 30px;
+    & > * {
+        color: #e5eaec;
+    }
+    .app-name {
+        font-size: 80px;
+    }
+    .scroll-down {
+        position: absolute;
+        top: 80vh;
+        left: 50%;
+        transform: translateX(-50%);
+        background: none;
+        cursor: pointer;
+        &::after {
+            content: "\f13a";
+            font-family: "fa";
+            font-size: 5rem;
+        }
+    }
+}

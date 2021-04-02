@@ -2,9 +2,9 @@ import React, { Component } from 'react'
 import { connect } from 'react-redux'
 import { AboutBoard } from '../boardMenu/AboutBoard'
 import { ChangeBoardBackground } from '../boardMenu/ChangeBoardBackground'
-import { RemoveBoard } from '../boardMenu/RemoveBoard'
 import { ActivityBoard } from '../boardMenu/ActivityBoard'
-import { Dashboard } from '../dashboard/Dashboard'
+// import { RemoveBoard } from '../boardMenu/RemoveBoard'
+// import { Dashboard } from '../dashboard/Dashboard'
 
 class _BoardSideMenu extends Component {
     state = {
@@ -36,8 +36,8 @@ class _BoardSideMenu extends Component {
     render() {
         const { isAboutBoardShown } = this.state
         const { isChangeBackgroundShown } = this.state
-        const { isBoardAnalysisShown } = this.state
-        const { isDeleteBoardShown } = this.state
+        // const { isBoardAnalysisShown } = this.state
+        // const { isDeleteBoardShown } = this.state
         const { selectedBoard, classname } = this.props
         const open = (classname) ? 'open' : ''
 
@@ -46,6 +46,7 @@ class _BoardSideMenu extends Component {
                 <header className="menu-header">
                     <h1>Menu</h1>
                     <button className="close-menu" onClick={this.props.toggleSideMenu}>X</button>
+                    <hr />
                 </header>
                 {/* <div className="hr"></div> */}
 
