@@ -17,7 +17,7 @@ export function AboutTasx() {
         },
         {
             img: 'homeData1',
-            title: 'Stay updated on projects progres',
+            title: 'Stay updated on project\'s progress',
             txt: 'Quick access to data about the progress of the tasks and team members in your projects, all shown in formatted graphs.',
             flexDiraction: ''
         }
@@ -38,7 +38,7 @@ export function AboutTasx() {
                 <li className={`cta about-unit flex justify-center align-center space-between`}>
                     <div >
                         <h3>What are you wating for?</h3>
-                        <p>Build bords or use our temlates to manage your projects</p>
+                        <p>Build bords or use our templates to manage your projects</p>
                     </div>
                     <Link to="/board">
                         <button className="start-btn">start here</button>

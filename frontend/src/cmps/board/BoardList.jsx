@@ -12,7 +12,7 @@ export function BoardList({ boards, title, toggleNewBoard }) {
                 {boardsForDisplay.map(board =>
                     <BoardPreview board={board} key={board._id} className="board" />
                 )}
-                {(title !== 'templates boards') && <li onClick={toggleNewBoard} className="board-preview add-board-btn"><p>+ Add board</p></li>}
+                {(title !== 'Templates boards') && <li onClick={toggleNewBoard} className="board-preview add-board-btn"><p>+ Add board</p></li>}
             </ul>
         </section>
     )

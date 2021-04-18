@@ -52,7 +52,7 @@ class _Home extends Component {
   }
 }
 // <section className="board-lists">
-//   {templatesBoards && <BoardList boards={this.props.templatesBoards} title="templates boards" toggleNewBoard={this.toggleNewBoard} />}
+//   {templatesBoards && <BoardList boards={this.props.templatesBoards} title="Templates boards" toggleNewBoard={this.toggleNewBoard} />}
 //   <BoardList boards={this.props.boards} title="Personal boards" toggleNewBoard={this.toggleNewBoard} />
 //   {/* {loggedInUser && <BoardList boards={this.props.boards} title="Personal boards" toggleNewBoard={this.toggleNewBoard} />} */}
 // </section>

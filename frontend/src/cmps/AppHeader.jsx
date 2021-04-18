@@ -31,11 +31,11 @@ class _AppHeader extends Component {
                     <nav>
                         <Link to="/" className="header-home"></Link>
                         <Link to="/board" className="header-board"> Boards </Link>
-                        <span className=" normal-media">
-                            <label>
-                                <BoardFilter />
-                            </label>
-                        </span>
+                        {/* <span className=" normal-media"> */}
+                        {/* <label> */}
+                        {/* <BoardFilter /> */}
+                        {/* </label> */}
+                        {/* </span> */}
                     </nav>
                     <h3 className="header-logo">TASX</h3>
 
@@ -45,11 +45,11 @@ class _AppHeader extends Component {
                     </nav>
                 </header>
                 <header className="narrow-media app-header flex space-between align-center">
-                    <span>
-                        <label>
-                            <BoardFilter />
-                        </label>
-                    </span>
+                    {/* <span> */}
+                    {/* <label> */}
+                    {/* <BoardFilter /> */}
+                    {/* </label> */}
+                    {/* </span> */}
                     <Link to="/home" className="header-about-us">About Us</Link>
 
                 </header>

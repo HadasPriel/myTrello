@@ -37,7 +37,7 @@ class _Boards extends Component {
                     <img className="boards-image" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582232/tasx2_rjorq4.png" alt="" /> */}
                     <hr />
                     <section className="board-lists main-container">
-                        {this.props.templatesBoards && <BoardList boards={this.props.templatesBoards} title="templates boards" toggleNewBoard={this.toggleNewBoard} />}
+                        {this.props.templatesBoards && <BoardList boards={this.props.templatesBoards} title="Templates boards" toggleNewBoard={this.toggleNewBoard} />}
                         <BoardList boards={this.props.boards} title="Personal boards" toggleNewBoard={this.toggleNewBoard} />
                     </section>
                     {this.state.isNewBoard && <AddBoard toggleNewBoard={this.toggleNewBoard} onLoadNewBoard={this.onLoadNewBoard} />}
