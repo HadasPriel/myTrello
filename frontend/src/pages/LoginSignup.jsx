@@ -121,22 +121,6 @@ class _LoginSignup extends Component {
           {this.props.users && this.props.users.map(user => <option key={user._id} value={user.username}>{user.fullname}</option>)}
         </select>
 
-        {/* <input
-          type="text"
-          name="username"
-          value={this.state.loginCred.username}
-          onChange={this.loginHandleChange}
-          placeholder="Username"
-        />
-        <br />
-        <input
-          type="password"
-          name="password"
-          value={this.state.loginCred.password}
-          onChange={this.loginHandleChange}
-          placeholder="Password"
-        />
-        <br /> */}
         <button>Login</button>
       </form>
 
@@ -144,7 +128,6 @@ class _LoginSignup extends Component {
 
     const { loggedInUser } = this.props
     return (
-
       <div className="login">
         <HomeHeader />
         <h1>
@@ -163,34 +146,6 @@ class _LoginSignup extends Component {
         {!loggedInUser && loginSection}
         {!loggedInUser && signupSection}
 
-
-
-
-
-
-        {/* <hr /> */}
-        {/* <section className="admin">
-          <details>
-            <summary>Admin</summary>
-            <button onClick={this.props.loadUsers}>Refresh Users</button>
-            {this.props.isLoading && 'Loading...'}
-            {this.props.users && <ul>
-
-              {this.props.users.map(user => (
-                <li key={user._id}>
-                  <pre>{JSON.stringify(user, null, 2)}</pre>
-                  <button
-                    onClick={() => {
-                      this.removeUser(user._id)
-                    }}
-                  >
-                    Remove {user.username}
-                  </button>
-                </li>
-              ))}
-            </ul>}
-          </details>
-        </section> */}
       </div>
     )
   }

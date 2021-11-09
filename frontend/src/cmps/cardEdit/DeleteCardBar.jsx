@@ -1,52 +1,28 @@
-import React, { Component } from 'react'
-import { connect } from 'react-redux'
+import React from 'react'
 
-// import { socketService } from '../services/socketService'
+export function DeleteCardBar(props) {
 
-class _DeleteCardBar extends Component {
-    state = {
-    }
-
-    componentDidMount() {
-        console.log(this.props);
-
-    }
-
-
-    deleteCard = async () => {
+    const deleteCard = async () => {
         try {
-            this.props.onRemoveCard(this.props.cardId)
+            props.onRemoveCard(props.cardId)
         } catch (err) {
             console.log(err);
         }
     }
 
+    return (
+        <form className="edit-bar" onSubmit={deleteCard}>
+            <header className="seconde">
+                <h3> Delete card?</h3>
+                <button type="button" onClick={props.toggleDeleteCard}>x</button>
 
+            </header>
+            <main>
+                <p>All actions will be removed from the activity feed and you won’t be able to re-open the card. There is no undo.</p>
+                <button className="add-btn red">Delete</button>
+            </main>
+        </form>
 
-    render() {
+    )
 
-        return (
-            <form className="edit-bar" onSubmit={this.deleteCard}>
-                <header className="seconde">
-                    <h3> Delete card?</h3>
-                    <button onClick={this.props.toggleDeleteCard}>x</button>
-
-                </header>
-                <main>
-                    <p>All actions will be removed from the activity feed and you won’t be able to re-open the card. There is no undo.</p>
-                    <button className="add-btn red">Delete</button>
-                </main>
-            </form>
-
-        )
-    }
 }
-
-const mapStateToProps = state => {
-    return {
-    }
-}
-const mapDispatchToProps = {
-}
-
-export const DeleteCardBar = connect(mapStateToProps, mapDispatchToProps)(_DeleteCardBar)

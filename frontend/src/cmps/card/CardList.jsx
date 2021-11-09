@@ -13,7 +13,6 @@ export function CardList(props) {
                     {provided.placeholder}
                 </ul>
             )}
-
         </Droppable>
     )
 }

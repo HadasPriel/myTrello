@@ -16,8 +16,6 @@ class _Board extends Component {
         filterBy: {
             title: ''
         }
-
-
     }
 
     async componentDidMount() {
@@ -26,18 +24,12 @@ class _Board extends Component {
         await this.props.loadBoard(boardId)
         socketService.emit('join board', boardId)
         socketService.on('update board', this.onChangeBoard)
-
-
     }
-
 
     componentWillUnmount() {
         socketService.off('update board', this.onChangeBoard)
         socketService.terminate()
-
     }
-
-
 
     onDragEnd = (result) => {
         // console.log('on drag result', result)
@@ -61,7 +53,6 @@ class _Board extends Component {
 
     // per react beautiful dnd after performing optimistic update to let server know that a reorder has occurred
     onDragGroups = async (startIndex, endIndex) => {
-        // console.log('I am in groups')
         let boardToUpdate = this.props.selectedBoard
         const groupToMove = boardToUpdate.groups.splice(startIndex, 1)
         boardToUpdate.groups.splice(endIndex, 0, groupToMove[0])
@@ -75,12 +66,8 @@ class _Board extends Component {
         const groupToMoveToIdx = boardToUpdate.groups.findIndex(group => group.id === destination.droppableId)
         const cardToMove = boardToUpdate.groups[groupToMoveFromIdx].cards.splice(source.index, 1)
         boardToUpdate.groups[groupToMoveToIdx].cards.splice(destination.index, 0, cardToMove[0])
-        // console.log('i am in this on drag cards')
         await this.props.updateBoard(this.props.selectedBoard)
-
     }
-
-
 
     toggleSideMenu = () => {
         this.setState({ isBoardMenuShown: !this.state.isBoardMenuShown })
@@ -95,28 +82,21 @@ class _Board extends Component {
         const { isBoardMenuShown, isDashboardShown } = this.state
 
         if (!selectedBoard) return <div>Loading...</div>
-        // console.log('BBB', selectedBoard.style.bgurl)
         const style = {
             boardStyle: { ...selectedBoard.style }
         }
         return (
             <section className="board-wraper"
                 style={{
-                    backgroundImage: "url(" + `${style.boardStyle.bgurl}` + ")",
+                    backgroundImage: "url(" + style.boardStyle.bgurl + ")",
                     backgroundPosition: "center",
                     backgroundSize: "cover",
                     backgroundRepeat: "no-repeat"
                 }}>
                 <AppHeader toggleSideMenu={this.toggleSideMenu} toggleDashboard={this.toggleDashboard} />
-                {/* <BoardHeader board={selectedBoard} toggleSideMenu={this.toggleSideMenu} /> */}
-                {/* <div className="board-title"> {selectedBoard.title}</div> */}
-                <nav>
-                    {/* <BoardFilter /> */}
-                    {/* <button onClick={this.toggleSideMenu}>Side Menu In Development</button> */}
-                </nav>
                 <BoardSideMenu classname={isBoardMenuShown} toggleSideMenu={this.toggleSideMenu} />
                 {selectedBoard.groups && <GroupList groups={selectedBoard.groups} boardId={selectedBoard._id} onDragEnd={this.onDragEnd} />}
-                {(isDashboardShown) && <Dashboard toggleDashboard={this.toggleDashboard} />}
+                {isDashboardShown && <Dashboard toggleDashboard={this.toggleDashboard} />}
 
             </section>
         )
@@ -135,7 +115,6 @@ const mapDispatchToProps = {
     loadBoard,
     updateBoard,
     updateBoardAfterSocket,
-
 }
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board)

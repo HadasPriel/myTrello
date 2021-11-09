@@ -5,9 +5,7 @@ import { ActivityTime } from './ActivityTime'
 class _CardActivitiesShow extends Component {
 
     render() {
-        this.props.activities.filter(activity => {
-            if (activity.card.id === this.props.card.id) return <div></div>
-        })
+
         return (
             <ul className="card-activities-show card-show show">
                 {this.props.activities.map(activity => {
@@ -19,8 +17,8 @@ class _CardActivitiesShow extends Component {
                                 <ActivityTime time={activity.createdAt} />
                             </div>
                         </li>
-
                     )
+                    else return ''
                 })}
             </ul>
         )

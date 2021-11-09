@@ -80,6 +80,9 @@ class _CardChecklistShow extends Component {
     }
 
     render() {
+
+        const { checklists } = this.props
+        if (!checklists || !checklists.length) return <div></div>
         const { todo, progress } = this.state
         const done = (progress === 100) ? 'done' : ''
         return (
@@ -89,7 +92,7 @@ class _CardChecklistShow extends Component {
                     <span>{`${progress}%`}</span>
                     <div className="progress-wraper"><div className={`progress-inner ${done}`} style={{ width: `${progress}%` }}></div></div>
                 </div>
-                {this.props.checklists.map(checklist => {
+                {checklists.map(checklist => {
                     return (
                         <li key={checklist.id} className="checklist-wraper" >
                             <header className="flex space-between">

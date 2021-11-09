@@ -30,11 +30,9 @@ class _Boards extends Component {
         return (
             <React.Fragment>
                 <HomeHeader loggedInUser={this.props.loggedInUser} />
-                <div className="boards flex col ">
+                <div className="boards flex col">
                     <h1>TASX</h1>
                     <h2>Get on Board</h2>
-                    {/* <hr />
-                    <img className="boards-image" src="https://res.cloudinary.com/ddgevj2yp/image/upload/v1611582232/tasx2_rjorq4.png" alt="" /> */}
                     <hr />
                     <section className="board-lists main-container">
                         {this.props.templatesBoards && <BoardList boards={this.props.templatesBoards} title="Templates boards" toggleNewBoard={this.toggleNewBoard} />}
@@ -56,8 +54,6 @@ const mapStateToProps = state => {
 }
 const mapDispatchToProps = {
     loadBoards,
-    // loadBoard,
-    //createBoard
 }
 
 export const Boards = connect(mapStateToProps, mapDispatchToProps)(_Boards)

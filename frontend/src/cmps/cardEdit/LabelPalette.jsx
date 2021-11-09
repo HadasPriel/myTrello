@@ -1,22 +1,13 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { EditLabelBar } from './EditLabelBar'
 
-// import { socketService } from '../services/socketService'
-
-class _LabelPalette extends Component {
+export class LabelPalette extends Component {
     state = {
         isEditLabelShow: false,
         labelToEdit: null
     }
 
-    componentDidMount() {
-        console.log(this.props.board);
-    }
-
-
     addLable = (label) => {
-        console.log(label);
         const cardToSave = { ...this.props.card }
         if (!cardToSave.labels) cardToSave.labels = [label]
         else {
@@ -24,7 +15,6 @@ class _LabelPalette extends Component {
             if (alredyOnCard) cardToSave.labels = cardToSave.labels.filter(currLabel => currLabel.id !== label.id)
             else cardToSave.labels.push(label)
         }
-        console.log('cardToSave', cardToSave);
         this.props.updateCard(cardToSave, 'added label')
     }
 
@@ -38,7 +28,6 @@ class _LabelPalette extends Component {
     }
 
     render() {
-
         return (
             <section className="label-palette edit-bar">
                 <header className="seconde">
@@ -65,11 +54,3 @@ class _LabelPalette extends Component {
     }
 }
 
-const mapStateToProps = state => {
-    return {
-    }
-}
-const mapDispatchToProps = {
-}
-
-export const LabelPalette = connect(mapStateToProps, mapDispatchToProps)(_LabelPalette)

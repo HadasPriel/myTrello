@@ -87,13 +87,16 @@
     nav {
         background-color: rgba(255, 255, 255, 0);
     }
-    .permanent {
+    .edit-container {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
         .nav-mini-show {
             display: flex;
             flex-wrap: wrap;
+            &* > {
+                display: inline-block;
+            }
         }
 
         @include for-normal-layout {

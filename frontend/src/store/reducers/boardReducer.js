@@ -1,5 +1,4 @@
 const initialState = {
-
   boards: [],
   templatesBoards: [],
   selectedBoard: {},

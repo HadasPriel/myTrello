@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 import { GroupPreview } from './GroupPreview.jsx'
 import { AddNewGroup } from './AddNewGroup.jsx'
 import { DragDropContext, Droppable } from 'react-beautiful-dnd'
 
-export class _GroupList extends Component {
+export class GroupList extends Component {
     state = {
         isOnAddGroupMode: false,
     }
@@ -32,10 +31,4 @@ export class _GroupList extends Component {
         )
     }
 }
-const mapStateToProps = state => {
-    return {
-    };
-};
-const mapDispatchToProps = {
-};
-export const GroupList = connect(mapStateToProps, mapDispatchToProps)(_GroupList);
+

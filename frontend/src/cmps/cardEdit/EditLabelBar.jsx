@@ -1,18 +1,15 @@
 
 
 import React, { Component } from 'react'
-import { connect } from 'react-redux'
 
-// import { socketService } from '../services/socketService'
 
-class _EditLabelBar extends Component {
+export class EditLabelBar extends Component {
     state = {
         label: { title: '' }
     }
 
     componentDidMount() {
         const label = { ...this.props.label }
-        console.log(label);
         this.setState({ label })
     }
 
@@ -27,10 +24,9 @@ class _EditLabelBar extends Component {
             if (currLabel.id !== label.id) return currLabel
             else return label
         })
-        console.log(boardToSave);
+
         try {
             await this.props.updateBoard(boardToSave)
-            // console.log(this.props.board)
         } catch (err) {
             console.log(err);
         }
@@ -46,7 +42,7 @@ class _EditLabelBar extends Component {
                 </header>
                 <main>
                     <label>Title
-                    <input type="text" name="title" value={this.state.label.title} placeholder="Enter Title"
+                        <input type="text" name="title" value={this.state.label.title} placeholder="Enter Title"
                             onChange={this.handleChange} autoComplete="off" required autoFocus ></input>
                     </label>
                 </main>
@@ -55,12 +51,3 @@ class _EditLabelBar extends Component {
         )
     }
 }
-
-const mapStateToProps = state => {
-    return {
-    }
-}
-const mapDispatchToProps = {
-}
-
-export const EditLabelBar = connect(mapStateToProps, mapDispatchToProps)(_EditLabelBar)

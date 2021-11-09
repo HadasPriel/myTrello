@@ -22,7 +22,6 @@ export function loadBoard(id) {
   return async dispatch => {
     try {
       const board = await boardService.getById(id)
-      // console.log('What got form server', board)
       dispatch({ type: 'SET_BOARD', board })
 
     } catch (err) {
@@ -185,42 +184,3 @@ export function updateBoardAfterSocket(changedBoard) {
   }
 
 }
-
-// export function changeBoardBackground(bgUrltoUpdate, boardToChange) {
-//   return async dispatch => {
-//     try {
-//       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-
-//       boardToUpdate.style.bgurl = bgUrltoUpdate
-
-//       let activity = await boardService.makeActivity(`changed board style`)
-
-//       boardToUpdate.activities.unshift(activity)
-
-//       const board = await boardService.updateBoard(boardToUpdate)
-
-//       socketService.emit('update board', board)
-//     } catch (err) {
-//       console.log('BoardActions: err in addCard', err)
-//     }
-//   }
-// }
-
-
-// export function removeGroup(groupId, boardToChange) {
-//   return async dispatch => {
-//     try {
-
-//       let boardToUpdate = JSON.parse(JSON.stringify(boardToChange))
-//       const updatedGroups = boardToUpdate.groups.filter(group => group.id !== groupId)
-//       boardToUpdate.groups = updatedGroups
-//       const board = await boardService.updateBoard(boardToUpdate)
-
-//       socketService.emit('update board', board)
-
-
-//     } catch (err) {
-//       console.log('BoardActions: err in removeGroup', err)
-//     }
-//   }
-// }
