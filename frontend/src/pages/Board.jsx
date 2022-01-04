@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { socketService } from '../services/socketService'
-import { loadBoard, updateBoard, updateBoardAfterSocket } from '../store/actions/boardActions.js'
+import { loadBoard, updateBoard, updatBoard } from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
 import { Dashboard } from '../cmps/dashboard/Dashboard'
 
@@ -48,7 +48,7 @@ class _Board extends Component {
 
     onChangeBoard = async (board) => {
         // console.log('on change board', board)
-        await this.props.updateBoardAfterSocket(board)
+        await this.props.updatBoard(board)
     }
 
     // per react beautiful dnd after performing optimistic update to let server know that a reorder has occurred
@@ -57,7 +57,6 @@ class _Board extends Component {
         const groupToMove = boardToUpdate.groups.splice(startIndex, 1)
         boardToUpdate.groups.splice(endIndex, 0, groupToMove[0])
         await this.props.updateBoard(this.props.selectedBoard)
-
     }
 
     onDragCards = async (destination, source) => {
@@ -114,7 +113,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     loadBoard,
     updateBoard,
-    updateBoardAfterSocket,
+    updatBoard,
 }
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board)

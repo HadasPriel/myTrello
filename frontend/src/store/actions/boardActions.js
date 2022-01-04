@@ -6,8 +6,6 @@ export function loadBoards(filterBy = {}) {
     try {
       const boards = await boardService.query(filterBy)
       if (filterBy.userId === '6004748cf9fd65ff47dc81e4') {
-        console.log('here');
-        console.log(boards);
         dispatch({ type: 'SET_TEMPLATES', boards })
       }
       else dispatch({ type: 'SET_BOARDS', boards })
@@ -170,7 +168,7 @@ export function filterByCardText(boardId, filterBy) {
 }
 
 
-export function updateBoardAfterSocket(changedBoard) {
+export function updatBoard(changedBoard) {
   return async dispatch => {
     try {
 

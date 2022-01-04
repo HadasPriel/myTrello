@@ -18,11 +18,6 @@ export const boardService = {
   makeActivity
 }
 
-
-// More ways to send query params:
-// return axios.get('api/toy/?id=1223&balance=13')
-// return axios.get('api/toy/?', {params: {id: 1223, balanse:13}})
-
 function query(filterBy = null) {
   let queryParams = new URLSearchParams()
   queryParams.set('userId', filterBy.userId)

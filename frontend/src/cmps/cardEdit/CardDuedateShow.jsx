@@ -36,7 +36,10 @@ export function CardDuedateShow(props) {
 
 
     return (
-        <p className={`duetime-fa ${urgent} `}>{` ${month} ${day}`}</p>
+        <div className="duedate">
+            <h5>Due Date </h5>
+            <p className={`duetime-fa ${urgent} `}>{` ${month} ${day}`}</p>
+        </div>
     )
 }
 

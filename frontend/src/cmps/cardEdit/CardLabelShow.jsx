@@ -14,17 +14,20 @@ class _CardLabelShow extends Component {
 
     render() {
         return (
-            <ul className="card-label-show">
-                {this.props.labels.map(label => {
-                    return (
-                        <li key={label.id} className={`label-edit ${label.id} flex align-center justify-center `} >
-                            <p className="label-title">{label.title}</p>
-                            {/* <button className="hover-nav" onClick={() => { this.removeLable(label.id) }}>X</button> */}
-                        </li>
+            <div>
+                <h5>Labels </h5>
+                <ul className="card-label-show">
+                    {this.props.labels.map(label => {
+                        return (
+                            <li key={label.id} className={`label-edit ${label.id} flex align-center justify-center `} >
+                                <p className="label-title">{label.title}</p>
+                                {/* <button className="hover-nav" onClick={() => { this.removeLable(label.id) }}>X</button> */}
+                            </li>
 
-                    )
-                })}
-            </ul>
+                        )
+                    })}
+                </ul>
+            </div>
         )
     }
 

@@ -15,22 +15,35 @@ export function DynamicNav(props) {
 
     switch (showingNav) {
         case 'labelPalette':
-            return <LabelPalette card={card} updateCard={updateCard} board={board} updateBoard={updateBoard} toggleLabelPalette={closeNav} />
+            var cmp = <LabelPalette card={card} updateCard={updateCard} board={board} updateBoard={updateBoard} toggleLabelPalette={closeNav} />
+            break
         case 'checklist':
-            return <AddChecklistBar card={card} updateCard={updateCard} toggleChecklistBar={closeNav} />
+            cmp = <AddChecklistBar card={card} updateCard={updateCard} toggleChecklistBar={closeNav} />
+            break
         case 'cover':
-            return <AddCoverBar card={card} updateCard={updateCard} toggleCoverBar={closeNav} />
+            cmp = <AddCoverBar card={card} updateCard={updateCard} toggleCoverBar={closeNav} />
+            break
         case 'dueTime':
-            return <AddDeutimeBar card={card} updateCard={updateCard} addDeuDate={addDeuDate} toggleAddDeutime={closeNav} />
+            cmp = <AddDeutimeBar card={card} updateCard={updateCard} addDeuDate={addDeuDate} toggleAddDeutime={closeNav} />
+            break
         case 'members':
-            return <AddMembersBar card={card} updateCard={updateCard} users={users} toggleAddMembers={closeNav} />
+            cmp = <AddMembersBar card={card} updateCard={updateCard} users={users} toggleAddMembers={closeNav} />
+            break
         case 'delete':
-            return <DeleteCardBar cardId={card.id} boardId={board._id} onRemoveCard={onRemoveCard} toggleDeleteCard={closeNav} />
+            cmp = <DeleteCardBar cardId={card.id} boardId={board._id} onRemoveCard={onRemoveCard} toggleDeleteCard={closeNav} />
+            break
         case 'img':
-            return <AddImgBar card={card} updateCard={updateCard} toggleAddImg={closeNav} addImg={addImg} />
+            cmp = <AddImgBar card={card} updateCard={updateCard} toggleAddImg={closeNav} addImg={addImg} />
+            break
 
         default:
-            return <div></div>
+            cmp = <div></div>
     }
+
+    return (
+        <div className="edit-list">
+            {cmp}
+        </div>
+    )
 
 }

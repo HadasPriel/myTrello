@@ -1,7 +1,5 @@
 const logger = require('../../services/logger.service')
-const userService = require('../user/user.service')
 const boardService = require('./board.service')
-const socketService = require('../../services/socket.service')
 
 async function getBoards(req, res) {
     try {
@@ -20,7 +18,6 @@ async function getBoard(req, res) {
     } catch (err) {
         logger.error('Cannot get board', err);
         res.status(500).send({ error: 'cannot get board' })
-
     }
 }
 
@@ -31,7 +28,6 @@ async function deleteBoard(req, res) {
     } catch (err) {
         logger.error('Cannot delete board', err);
         res.status(500).send({ error: 'cannot delete board' })
-
     }
 }
 
@@ -51,7 +47,6 @@ async function updateBoard(req, res) {
     try {
         const board = req.body;
         const updatedBoard = await boardService.update(board)
-
         res.send(updatedBoard)
     } catch (err) {
         logger.error('Cannot update board', err);
