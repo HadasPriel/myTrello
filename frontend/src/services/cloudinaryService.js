@@ -2,8 +2,8 @@ export const cloudinaryService = {
   uploadImg
 }
 async function uploadImg(file) {
-  const CLOUD_NAME = "dtg8d5gnc"
-  const UPLOAD_URL = `https://api.cloudinary.com/v1_1/${CLOUD_NAME}/image/upload`
+  // const CLOUD_NAME = 
+  const UPLOAD_URL = `https://api.cloudinary.com/v1_1/${cloudinaryCloudName}/image/upload`
 
   const formData = new FormData();
   formData.append('file', file)
