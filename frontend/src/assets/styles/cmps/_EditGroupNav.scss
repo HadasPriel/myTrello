@@ -1,7 +1,7 @@
 .edit-group-container {
     width: 276px;
-    background: #EBECF0;
-    position: fixed;
+    background: #ebecf0;
+    position: absolute;
     z-index: 4;
     border-radius: 3px;
     margin-left: 220px;
@@ -11,16 +11,13 @@
 
     button {
         padding: 5px;
-        background-color: #EBECF0;
+        background-color: #ebecf0;
         display: block;
     }
 
     form {
         width: 259px;
-        margin:auto;
-        margin-top:10px;
+        margin: auto;
+        margin-top: 10px;
     }
-  
-
-
 }

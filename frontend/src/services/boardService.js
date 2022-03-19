@@ -36,9 +36,11 @@ function remove(boardId) {
 }
 
 async function updateBoard(board) {
-  const updatedBoard = await httpService.put(`board/${board._id}`, board)
+  const user = userService.getLoggedinUser()
+  const updatedBoard = await httpService.put(`board/${board._id}`, { board, userId: user?._id || null })
   return updatedBoard
 }
+
 async function add(board) {
 
   const addedBoard = await httpService.post(`board`, board)

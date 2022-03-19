@@ -8,7 +8,7 @@
     },
     "scripts": {
         "start": "node server.js",
-        "server:dev": "set NODE_ENV=development && nodemon server.js",
+        "dev": "set NODE_ENV=development && nodemon server.js",
         "server:prod": "node server.js"
     },
     "author": "Me",
@@ -22,7 +22,7 @@
         "express-session": "^1.16.2",
         "express-socket.io-session": "^1.3.5",
         "mongodb": "^3.2.7",
-        "socket.io": "^3.1.0"
+        "socket.io": "^4.2.0"
     },
     "devDependencies": {
         "nodemon": "1.18.10"

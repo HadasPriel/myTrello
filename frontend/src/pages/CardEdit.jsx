@@ -56,7 +56,7 @@ class _CardEdit extends Component {
                 boardToSave.activities.unshift(activity)
             }
             await this.props.updateBoard(boardToSave)
-            this.loadCard()
+            // this.loadCard()
 
         } catch (err) {
             console.log('err in updateCard', err)

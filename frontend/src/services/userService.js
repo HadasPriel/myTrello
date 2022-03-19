@@ -1,5 +1,7 @@
 // import { storageService } from './asyncStorageService'
 import { httpService } from './httpService'
+import { socketService } from './socketService'
+
 const SCORE_FOR_REVIEW = 10
 
 export const userService = {
@@ -14,7 +16,7 @@ export const userService = {
     increaseScore
 }
 
-window.userService = userService
+// window.userService = userService
 // Note: due to async, must run one by one...
 // userService.signup({fullname: 'Puki Norma', username: 'user1', password:'123',score: 100, isAdmin: false})
 // userService.signup({fullname: 'Master Adminov', username: 'admin', password:'123', score: 100, isAdmin: true})
@@ -53,6 +55,7 @@ async function login(userCred) {
     // return _handleLogin(user)
 
     const user = await httpService.post('auth/login', userCred)
+    socketService.emit('set-user-socket', user._id);
     if (user) return _saveLocalUser(user)
 }
 async function signup(userCred) {
@@ -62,6 +65,8 @@ async function signup(userCred) {
 }
 async function logout() {
     sessionStorage.clear()
+    // socketService.emit('unset-user-socket');
+
     return await httpService.post('auth/logout')
 }
 function _saveLocalUser(user) {

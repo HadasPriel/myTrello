@@ -1,5 +1,6 @@
 node_modules
 logs
-public
+
+
 
 const mongoURI = 'mongodb+srv://hadass91:puki1234@trello.fvueg.mongodb.net/myFirstDatabase?retryWrites=true&w=majority'

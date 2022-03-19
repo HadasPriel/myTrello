@@ -3,7 +3,7 @@ import { connect } from 'react-redux'
 import { GroupList } from '../cmps/group/GroupList'
 import { BoardSideMenu } from '../cmps/board/BoardSideMenu'
 import { socketService } from '../services/socketService'
-import { loadBoard, updateBoard, updatBoard } from '../store/actions/boardActions.js'
+import { loadBoard, updateBoard, updateBoardFromSocket } from '../store/actions/boardActions.js'
 import { AppHeader } from '../cmps/AppHeader'
 import { Dashboard } from '../cmps/dashboard/Dashboard'
 
@@ -48,7 +48,7 @@ class _Board extends Component {
 
     onChangeBoard = async (board) => {
         // console.log('on change board', board)
-        await this.props.updatBoard(board)
+        await this.props.updateBoardFromSocket(board)
     }
 
     // per react beautiful dnd after performing optimistic update to let server know that a reorder has occurred
@@ -113,7 +113,7 @@ const mapStateToProps = state => {
 const mapDispatchToProps = {
     loadBoard,
     updateBoard,
-    updatBoard,
+    updateBoardFromSocket,
 }
 
 export const Board = connect(mapStateToProps, mapDispatchToProps)(_Board)
